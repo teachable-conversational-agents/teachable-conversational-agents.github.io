@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta property="og:type" content="website">
+
+        <!-- !!! Change the background image of the page to your header image by changing the ".background-image" property in main.css. -->
+        <!-- !!! I added a fancy gradient effect to have the page's color gradually go from the color at the bottom of the image to black. 
+        I did that like this: background-image: url('./img/task2-side.png'), linear-gradient(to bottom, rgb(122, 115, 110), #222222); -->
+
+        <title>Teachable Conversational Agents for Crowdwork: Effects on Performance and Trust</title>
+        <!-- -------------- -->
+        <!-- OPENGRAPH INFO: This is what will populate the "cards" that show up when you post the link on Facebook, Slack, etc. -->
+        <!-- -------------- -->
+        
+        <meta name="description" content="Research from Waterloo HCI: Near-Keyboard Hand Postures for Expanded Laptop Interaction">
+        <meta name="keywords" content="!!! KEYWORDS HERE">
+        <meta name="author" content="Nalin Chhibber, Joslin Goh, Edith Law from University of Waterloo">
+        <meta property="og:title" content="Teachable Conversational Agents for Crowdwork: Effects on Performance and Trust">
+        <meta property="og:description" content="Research from Waterloo HCI: Near-Keyboard Hand Postures for Expanded Laptop Interaction">
+
+        <!-- The URL for your site. For social media posts etc. -->
+        <meta property="og:url" content="https://typealike.github.io/">
+
+        <!-- Header image. Important to put a good, representative image here as this is what shows on clickable links! -->
+        <meta property="og:image" content="img/Figure2.png">
+
+        <!-- Info specifically for Twitter posts. Keep it the same as the other stuff. -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@nalinchhibber">
+        <meta name="twitter:creator" content="@nalinchhibber">
+        <meta name="twitter:title" content="Teachable Conversational Agents for Crowdwork: Effects on Performance and Trust">
+        <meta name="twitter:description" content="Research from Waterloo HCI: Near-Keyboard Hand Postures for Expanded Laptop Interaction">
+        <meta name="twitter:image" content="img/Figure2.png">
+        
+        <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> --><!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="./main.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700&display=swap" rel="stylesheet">        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    
+        <!-- This is where you'd paste your Google Analytics tag if you feel like having it. -->
+
+        <!-- <script async src="https://www.googletagmanager.com/gtag/... -->
+
+    </head>
+    <body>
+        <div id="header" class="col-md-10 col-sm-12 offset-md-1 offset-sm-0">
+            <p class="title">Teachable Conversational Agents for Crowdwork: Effects on Performance and Trust</p>
+	    <img class="pad-right headshot" src="img/nalin_chhibber.png">
+	    <img class="pad-right headshot" src="img/joslin_goh.jpeg">
+	    <img class="pad-right headshot" src="img/edith_law.jpeg">
+	    <!-- <p style="float: right;font-size: 10px;text-align: center;margin-top: -60px;">
+		<img src="img/bestpaper.png" style="width: 42px;margin: 5px;">
+		<br>
+		    Best Paper Honorable Mention Award
+		<br>
+		ACM ISS 2021
+	     </p> -->
+            <p class="authors">Nalin Chhibber, Joslin Goh, Edith Law</p>
+            <img class="pad-right" src="img/waterloo.png">
+		
+	    <a class="download-link rounded col-xs-12" href="https://github.com/teachable-conversational-agents/">Code</a>
+            <a class="download-link rounded col-xs-12" href="assets/Teachable_Conversational_Agent_CSCW.pdf">Paper</a>
+        </div>
+        <div id="content" class="col-md-10 col-xs-12 offset-md-1">
+            <div id="teaser" class="col-10 offset-1 content-section">
+                <blockquote></blockquote>
+                <!-- !!! TEASER IMAGE HERE  -->
+                <!-- <img class="figure col-lg-10 img-fluid mx-auto d-block" src="img/teaser.png"> -->
+		
+            </div>
+
+            <div id="findings" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
+                <h1>Quick Facts</h1>
+                <div class="row">
+                    <div class="col-xl-6 offset-xl-0col-xs-12">
+			<p>Overall, our work contributes:</p>
+                        <ol class="findings-row">
+                            <li class="findings-text">    
+                                A study quantifying the extent to which crowdworkers perform better by teaching an agent.			    
+			                </li>
+                            <li class="findings-text">
+                                A study evaluating workers’ trust and willingness to delegate tasks to an agent that they taught
+                            </li>
+                            <li class="findings-text">
+                                A set of design guidelines for the use of teachable agents in crowdsourcing contexts.
+                            </li>
+                        </ol>
+		        <p>
+			We evaluate our approach by answering two questions: Does teaching an agent impact crowdworkers performance in the task? Does teaching an agent impact trust and influence crowdworkers’ willingness to
+            delegate tasks?
+			</p>
+                    </div>
+                    <div class="col-xl-6 offset-xl-0 col-xs-12">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kHRqECNXtuI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+            <div id="abstract" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
+                <h1>Abstract</h1>
+		    <!-- <img class="figure col-xl-5 col-lg-5 col-md-5 col-sm-8 col-xs-12 img-fluid mx-auto d-block" src=img/typealike_system.png> -->
+                <p>
+                    Traditional crowdsourcing has mostly been viewed as requester-worker interaction where requesters publish tasks to solicit input from human crowdworkers. While most of this research area is catered towards the interest of requesters, we view this workflow as a teacher-learner interaction scenario where one or more human-teachers solve Human Intelligence Tasks to train machine learners. In this work, we explore how teachable machine learners can impact their human-teachers, and whether they form a trustable relation that can be relied upon for task delegation in the context of crowdsourcing. Specifically, we focus our work on teachable agents that learn to classify news articles while also guiding the teaching process through conversational interventions. In a two-part study, where several crowd workers individually teach the agent, we investigate whether this learning by teaching approach benefits human-machine collaboration, and whether it leads to trustworthy AI agents that crowd workers would delegate tasks to. Results demonstrate the benefits of the learning by teaching approach, in terms of perceived usefulness for crowdworkers, and the dynamics of trust built through the teacher-learner interaction.
+                </p>
+            </div>
+
+            <div id="guide" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
+                <h1>Design Considerations for Interactive Human-AI Systems</h1>
+		<p>
+		
+			</p>
+                <ul>
+			<li>
+				<b>Conversation as an information gathering mechanism:</b> 
+			
+			</li>
+			<li>
+				<b>Explicit nature of teaching and learning: </b>
+			
+				</li>
+			<li>
+				<b>Treating humans as teachers rather than mere annotators:</b>
+			</li>
+                 </ul>
+            </div>		
+		
+            <div id="technique" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
+                <h1>Technique</h1>
+		    
+		<p>
+		
+		</p>
+                <img class="figure img-fluid mx-auto d-block" src="http://via.placeholder.com/500x200.png">
+               <p>
+
+		</p>
+
+
+                <!-- !!! Github URL here if you want to share it! -->
+                <!-- <small>Source code available on <a href="#">GitHub</a>.</small> -->
+            </div>
+		
+	    <div id="exp1" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
+                <h1>Experiments</h1>
+		<p> 
+		    
+		</p>
+		<h2>Experiment I: Learning By Teaching </h2>
+                <p>
+
+		</p>
+                <!-- <img class="figure col-xl-4 col-lg-5 col-md-6 col-sm-8 col-xs-12 img-fluid mx-auto d-block" src="http://via.placeholder.com/700x700.png"> -->
+                <!-- <img class="figure col-xl-5 col-lg-5 col-md-5 col-sm-8 col-xs-12 img-fluid mx-auto d-block" src=img/experiment_1.gif> -->
+                <!-- <img class="figure col-xl-6 col-md-8 col-sm-8 col-xs-12 img-fluid mx-auto d-block" src="http://via.placeholder.com/500x200.png"> -->
+
+	        <h2>Experiment II: Dynamics of Trust </h2>
+	        <p> 
+
+		</p>
+                <!-- <img class="figure col-lg-10 img-fluid mx-auto d-block" src="http://via.placeholder.com/500x200.png"> -->
+                
+            </div>
+            
+            <div id="disc" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
+                <h1>What Do We Learn?</h1>
+                <!-- <ol>
+                    <li>
+                        
+                    </li>
+                    <li>
+                        
+                    </li>
+		    	
+                    <li>
+                        
+                    </li>
+                </ol> -->
+
+            </div>
+
+            <div id="disc" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
+                <h1>Data</h1>
+                <br/>
+	        <a href="https://mfr.osf.io/render?url=https://osf.io/s4q2g/download">https://mfr.osf.io/render?url=https://osf.io/s4q2g/download</a>
+            </div>
+
+            <div id="publication" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
+                <h1>Publication</h1>
+                <!-- <p>!!! AUTHORS. !!! YEAR. <b>!!! YOUR TITLE HERE</b>. In proceedings of !!! CONFERENCE ETC. DOI: <a class="doi-url" href="http://google.ca">!!! DOI URL (change the href too!)</a></p> -->
+                <p>
+			Nalin Chhibber, Joslin  Goh, and Edith Law. 2022. <b>Teachable Conversational Agents for Crowdwork: Effects on Performance and Trust.</b> <a href="https://doi.org/10.1145/3555223">DOI: https://doi.org/10.1145/3555223</a>
+                    <!-- <a class="doi-url" href="http://google.ca"></a></p> -->            
+                <br>
+                <h2>BibTeX</h2>
+            	<pre>
+			<code>
+			<br/>
+			</code>
+		</pre>
+            </div>
+		
+	    <div id="Presentation" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
+                <h1>Presentation</h1>
+                <!-- <p>!!! AUTHORS. !!! YEAR. <b>!!! YOUR TITLE HERE</b>. In proceedings of !!! CONFERENCE ETC. DOI: <a class="doi-url" href="http://google.ca">!!! DOI URL (change the href too!)</a></p> -->
+                <div class="col-xl-6 offset-xl-0 col-xs-12" style="margin: 0 auto;">
+		    <!-- <h2>Slide Deck</h2>
+		    <div class="embed-responsive embed-responsive-16by9">
+                 coming soon 
+		    </div>
+		    <br/><br/>
+	            <h2>Conference Talk</h2>
+		    <div class="embed-responsive embed-responsive-16by9">
+                 coming soon 
+		    </div> -->
+		</div>
+            </div>
+	
+
+            <div id="contact" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
+                <h1>Contact Us</h1>
+                <p>Questions? Feel free to contact:</p>
+                <div class="grid-container">
+			    	
+                    <div class="grid-profile">
+                        <img class="pad-right headshot grid-content" src="img/nalin_chhibber.png">
+                        <div class="grid-content">
+                            <a href="https://nalinc.github.io">Nalin Chhibber</a>
+                            <br> M.Math Computer Science
+                            <br>School of Computer Science, University of Waterloo
+                            <br>nalin.chhibber [at] uwaterloo.ca
+                        </div>
+                    </div>
+                    
+                    <div class="grid-profile">
+                        <img class="pad-right headshot grid-content" src="img/joslin_goh.jpeg">
+                        <div class="grid-content">
+                            <a href="https://joslin.pw/">Joslin Goh</a>
+                            <br> Associate Director, Statistical Consulting Centre
+                            <br>University of Waterloo
+                            <br>joslin.goh [at] uwaterloo.ca
+                        </div>
+                    </div>
+                    
+                    <div class="grid-profile">
+                        <img class="pad-right headshot grid-content" src="img/edith_law.jpeg">
+                        <div class="grid-content">
+                            <a href="http://edithlaw.ca/">Edith Law</a>
+                            <br> Associate Professor
+                            <br>School of Computer Science, University of Waterloo
+                            <br>edith.law [at] uwaterloo.ca
+                        </div>
+                    </div>
+                </div>
+                <!-- <ul>
+                    <li><span class="contact-author-name">Nalin Chhibber </span>Uninversity of Waterloo <br>nalin.chhibber@uwaterloo.ca</li>
+                    <li><span class="contact-author-name">Hemant Surale </span>!!! AUTHOR DESCRIPTION <br>!!! AUTHOR EMAIL</li>
+                    <li><span class="contact-author-name">Fabrice Matulic </span>!!! AUTHOR DESCRIPTION <br>!!! AUTHOR EMAIL</li>
+                    <li><span class="contact-author-name">Daniel Vogel </span>!!! AUTHOR DESCRIPTION <br>!!! AUTHOR EMAIL</li>
+                </ul> -->
+            </div>
+            <hr class="rule col-md-10 offset-md-1"col-xs-12 offset-xs-0 >
+            <p class="copyright text-center">
+               <!-- !!! AUTHOR NAMES HERE, !!! INSTITUTION NAMES HERE © !!! YEAR -->
+               Nalin Chhibber, Joslin Goh, Edith Law <br/> 
+               University of Waterloo © 2022
+               <br>
+               <!-- Blog post template by <a href="http://johannwentzel.ca">Johann Wentzel</a>. -->
+            </p>
+
+        </div>
+    </body>
+</html>
