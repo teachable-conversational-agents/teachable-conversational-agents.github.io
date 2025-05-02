@@ -108,33 +108,23 @@
                 </p>
             </div>
 
-            <div id="guide" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
-                <h1>Design Considerations for Interactive Human-AI Systems</h1>
-		<p>
-		
-			</p>
-                <ul>
-			<li>
-				<b>Conversation as an information gathering mechanism:</b> 
-			
-			</li>
-			<li>
-				<b>Explicit nature of teaching and learning: </b>
-			
-				</li>
-			<li>
-				<b>Treating humans as teachers rather than mere annotators:</b>
-			</li>
-                 </ul>
-            </div>		
 		
             <div id="technique" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
                 <h1>Technique</h1>
-		    
+		    Our teachable agent was deployed as a textual conversational bot embedded into a task environment that supports human-teachers learning while teaching conversational agents. 
+		    In the task interface, participants read an article and converse with a conversational agent to teach it how to classify that article. 
+		    There are two modes, teaching and testing, as described in figure below. 
+		    In the teaching mode, while reading the article, participants could enter or highlight words to explain how an article should be classified.
+		    In the testing mode, participants could present new articles to the teachable agent, and ask them to classify articles in real-time based on what they have learned from the conversational interaction. 
+		    After the agent’s prediction, correctly classified articles were coloured green by the system, whereas incorrectly classified articled were coloured red.
+
+
+		    The agent was learning to classify articles using an enhanced version of the Naive Bayes algorithm that incorporates human teaching as additional input.
+		    Naive Bayes is a generative classifier, which computes the posterior probability P(y|x) (i.e., the probability of a class y given data x); 
+		    for text classification, the assumption is that the data is a bag of words and that presence of a particular word in a class is independent to the presence of other words in that class. 
 		<p>
 		
 		</p>
-                <img class="figure img-fluid mx-auto d-block" src="http://via.placeholder.com/500x200.png">
                <p>
 
 		</p>
@@ -147,11 +137,24 @@
 	    <div id="exp1" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
                 <h1>Experiments</h1>
 		<p> 
-		    
+		    We conducted 2 experiments to validate the technique. Both the experiments were conducted on Amazon Mechanicam Turk with anonymous participants across several days.
 		</p>
 		<h2>Experiment I: Learning By Teaching </h2>
+		    
                 <p>
-
+			<img class="figure img-fluid mx-auto d-block" src="img/experiment_1_flow.png">
+		</p>
+		<p>
+			The first experiment was aimed to investigate whether teaching a conversational agent improves crowdworkers’ task performance and experience.
+			For this, we recruited 100 workers Amazon Mechanical Turk with diverse background such as freelancers, managers, engineers, home-makers, and designers. 
+			Participants were split into two conditions
+			<ul>
+				<li>Treatment group (Teaching): Participants taught a conversational agent (Kai) how to classify news articles.</li>
+				<li>Control group (Self-Classification): Participants performed the same task with rubric-based instructions but without teaching the agent.</li>
+			</ul>
+			
+			Both groups completed pre- and post-task article classifications. The teaching group interacted with Kai using conversational prompts; the control group used instructional rubrics. 
+		    	We measured classification accuracy of participants before and after interaction. information captured and perceived usefulness and enjoyment (via Intrinsic Motivation Inventory).
 		</p>
                 <!-- <img class="figure col-xl-4 col-lg-5 col-md-6 col-sm-8 col-xs-12 img-fluid mx-auto d-block" src="http://via.placeholder.com/700x700.png"> -->
                 <!-- <img class="figure col-xl-5 col-lg-5 col-md-5 col-sm-8 col-xs-12 img-fluid mx-auto d-block" src=img/experiment_1.gif> -->
@@ -159,27 +162,73 @@
 
 	        <h2>Experiment II: Dynamics of Trust </h2>
 	        <p> 
-
+			<img class="figure img-fluid mx-auto d-block" src="img/experiment_2_flow.png">
+		</p>
+		<p>
+			The second experiment was aimed to study whether teaching an agent affects crowdworkers’ trust and willingness to delegate tasks to that agent.
+			This time, we recruited 80 workers Amazon Mechanical Turk and again split them into two conditions each with two phases. 
+			In first phase, participants either interacted with a pre-trained agent or taught their own agent.
+			
+			<ul>
+				<li>Treatment group: Participants taught their own agent and saw it perform.</li>
+				<li>Control group: Participants used a pre-trained agent they didn’t teach themselves.</li>
+			</ul>
+			After that, participants could delegate part or all of a bonus classification task (12 articles) to the agent. Their decisions, trust levels, and reasoning were recorded.
 		</p>
                 <!-- <img class="figure col-lg-10 img-fluid mx-auto d-block" src="http://via.placeholder.com/500x200.png"> -->
                 
             </div>
             
             <div id="disc" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
-                <h1>What Do We Learn?</h1>
-                <!-- <ol>
+                <h1>What Did We Learn?</h1>
+                <ol>
                     <li>
-                        
+                        Participants who taught their own agent in the first experiment showed higher accuracy in the post-interaction task. 
+			Also, they shared more information exchanged than the participants who merely self-classified (especially internally and externally relevant words).
                     </li>
                     <li>
-                        
+                        Participants who taught their own agent found the tasks more useful and enjoyable than those who did the task solo.
                     </li>
-		    	
                     <li>
-                        
+                        Participants who taught their own agent increased reported trust in the agent and delegated more tasks to the agent (63%) compared to participants from control group (47.5%).
                     </li>
-                </ol> -->
+                </ol>
 
+            </div>
+
+	    <div id="guide" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
+                <h1>Design Considerations for Interactive Human-AI Systems</h1>
+		<p>
+		
+			</p>
+                <ul>
+			<li>
+				<b>Conversation as an information gathering mechanism:</b> 
+				<ul>
+					<li>Key Idea: Use dialogue to naturally extract useful training information from users.</li>
+					<li>Insight: Strategic, guided conversations help gather clarifications, elicit important features, and reduce data biases or class imbalances.</li>
+					<li>Implication: Conversation can serve as an intuitive interface for interactive machine learning systems.</li>
+				</ul>
+			
+			</li>
+			<li>
+				<b>Explicit nature of teaching and learning: </b>
+				<ul>
+					<li>Key Idea: Make the teaching/learning process visible and understandable to users.</li>
+					<li>Insight: Users should know when their teaching is being used to improve the agent, and the agent should visibly reflect learning progress.</li>
+					<li>Implication: Provide explicit feedback cues (visual/audio) showing when the agent is listening, learning, or retrieving knowledge to build trust and engagement.</li>
+				</ul>
+			
+				</li>
+			<li>
+				<b>Treating humans as teachers rather than mere annotators:</b>
+				<ul>
+					<li>Key Idea: Shift user role from data labeler to knowledge contributor.</li>
+					<li>Insight: People found more enjoyment and value in the teaching condition than in self-annotating.</li>
+					<li>Implication: Design systems that embrace users as teachers, offering guidance and framing the task as a collaborative learning experience.</li>
+				</ul>
+			</li>
+                 </ul>
             </div>
 
             <div id="disc" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
@@ -198,27 +247,35 @@
                 <h2>BibTeX</h2>
             	<pre>
 			<code>
+			@article{chhibber2022teachable,
+			  title={Teachable conversational agents for crowdwork: Effects on performance and trust},
+			  author={Chhibber, Nalin and Goh, Joslin and Law, Edith},
+			  journal={Proceedings of the ACM on Human-Computer Interaction},
+			  volume={6},
+			  number={CSCW2},
+			  pages={1--21},
+			  year={2022},
+			  publisher={ACM New York, NY, USA}
+			}
 			<br/>
 			</code>
 		</pre>
             </div>
-		
 	    <div id="Presentation" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
                 <h1>Presentation</h1>
                 <!-- <p>!!! AUTHORS. !!! YEAR. <b>!!! YOUR TITLE HERE</b>. In proceedings of !!! CONFERENCE ETC. DOI: <a class="doi-url" href="http://google.ca">!!! DOI URL (change the href too!)</a></p> -->
                 <div class="col-xl-6 offset-xl-0 col-xs-12" style="margin: 0 auto;">
-		    <!-- <h2>Slide Deck</h2>
+		    <h2>Slide Deck</h2>
 		    <div class="embed-responsive embed-responsive-16by9">
-                 coming soon 
+			<iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/e/2PACX-1vRYlXinVMKvQjXzjkD0d2C-O3H_-y_rK61OvxoYyowjJ-u9c63pFEJSQCJcLorQVA/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 		    </div>
 		    <br/><br/>
 	            <h2>Conference Talk</h2>
 		    <div class="embed-responsive embed-responsive-16by9">
-                 coming soon 
-		    </div> -->
+		       <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7yKgCZwTRNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+		    </div>
 		</div>
-            </div>
-	
+            </div>	
 
             <div id="contact" class="col-md-10 offset-md-1 col-xs-12 offset-xs-0 content-section">
                 <h1>Contact Us</h1>
